@@ -14,6 +14,19 @@ Usage
 (TODO)
 ```
 
+### Nested dictionary and list access
+
+_(not coded by maintainer, see module docstrings for reference)_
+
+Utility functions for nested dictionary and list access.
+
+[code](junkdrawer/nested_dict_access_by_key_list.py)
+
+Usage:
+```sh
+TODO
+```
+
 ### JSON/Dict-like data filter
 
 A filter function that can work on any JSON-like data structure (i.e. lists, dicts, and values). The filter function takes a list of the JSON-like data instances and then applies filters (specified by simple filter format) to them. Filters can be supplied to filter out matching instances or filter in matching instances. The filters can be for string matches, substring check (via python "in"), re.search pattern or re.match pattern. Filters may also be flagged to be applied separately as a set (i.e. compound filter).
