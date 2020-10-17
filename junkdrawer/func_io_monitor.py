@@ -5,9 +5,6 @@ A utility for wrapping functions and classes in order to record all input and ou
 
 Use Cases:
 - Creating input/output data for unit testing.
--
-
-Reference: https://github.com/elegantmoose/projectKA/blob/master/python_patterns/function_io_monitor.py
 
 Usage:
 
