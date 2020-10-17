@@ -13,6 +13,7 @@ import uuid
 import random
 
 
+# TODO: Allow user to supply n parameter
 # TODO: Allow user to supply data model (yaml file or something) and then build up objects dynamically, thus dont have to change static coding of objects.
 
 
