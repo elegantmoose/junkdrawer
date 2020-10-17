@@ -13,13 +13,13 @@ The filters can be for string matches, substring check (via python "in"), re.sea
 or re.match pattern. Filters may also be flagged to be applied separately as a set
 (i.e. compound filter).
 
-[code](/junkdrawer/json_data_struct_filter)
+[code](/junkdrawer/json_data_struct_filter).py
 
 ## Class/Function input/output monitor
 
 Wrap classes and functions to record all input and output.
 
-[Code](junkdrawer/func_io_monitor.py)
+[code](junkdrawer/func_io_monitor.py)
 
 ```sh
 >>from func_io_monitor import func_io_monitor, class_io_monitor, RECORD_TYPES
