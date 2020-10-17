@@ -11,6 +11,7 @@ Simple wrapper for creating Python logger instances with file handlers.
 
 Usage
 ```
+(TODO)
 ```
 
 ### JSON/Dict-like data filter
@@ -21,6 +22,7 @@ A filter function that can work on any JSON-like data structure (i.e. lists, dic
 
 Usage
 ```
+(TODO)
 ```
 
 ### Class/Function input/output monitor
