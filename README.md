@@ -14,6 +14,21 @@ Usage
 (TODO)
 ```
 
+### Compare Storage Perfomance of Python Data Structures
+
+Evaluate the performance of the following data structures for a data object:
+  - dict
+  - list
+  - dataclass
+  - slots
+
+[code](junkdrawer/dict_vs_list_vs_dataclass_vs_slots.py)
+
+Usage:
+```
+TODO
+```
+
 ### Nested dictionary and list access
 
 _(not coded by maintainer, see module docstrings for reference)_
