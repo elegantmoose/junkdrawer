@@ -3,11 +3,23 @@ Useful Python utilities and patterns for a career python developer.
 
 ## Log creator
 
+Simple wrapper for creating Python logger instances with file handlers.
+
+[code](/junkdrawer/log.py)
+
+Usage
+```
+```
+
 ## JSON/Dict-like data filter
 
 A filter function that can work on any JSON-like data structure (i.e. lists, dicts, and values). The filter function takes a list of the JSON-like data instances and then applies filters (specified by simple filter format) to them. Filters can be supplied to filter out matching instances or filter in matching instances. The filters can be for string matches, substring check (via python "in"), re.search pattern or re.match pattern. Filters may also be flagged to be applied separately as a set (i.e. compound filter).
 
 [code](/junkdrawer/json_data_struct_filter.py)
+
+Usage
+```
+```
 
 ## Class/Function input/output monitor
 
@@ -15,6 +27,7 @@ Wrap classes and functions to record all input and output.
 
 [code](junkdrawer/func_io_monitor.py)
 
+Usage
 ```sh
 >>from func_io_monitor import func_io_monitor, class_io_monitor, RECORD_TYPES
 >>
