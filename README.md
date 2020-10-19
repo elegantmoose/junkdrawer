@@ -1,5 +1,5 @@
 # junkdrawer
-Useful Python utilities and patterns for a career python developer.
+Useful Python utilities and patterns for a career Python developer.
 
 ## Utilities
 
