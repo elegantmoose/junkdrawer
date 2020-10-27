@@ -4,16 +4,18 @@ Compare data structure storage performance of:
   - list
   - dataclasses
   - slots
+  
+Usage:
+>>python dict_vs_list_vs_dataclass_vs_slots.py -n 10000
 """
 
-
+import argparse
 from pympler import asizeof
 from dataclasses import dataclass
 import uuid
 import random
 
 
-# TODO: Allow user to supply n parameter
 # TODO: Allow user to supply data model (yaml file or something) and then build up objects dynamically, thus dont have to change static coding of objects.
 
 
@@ -38,13 +40,30 @@ class MKDC:
     float_2: float
 
 
+def _get_argparser():
+    """to organize and clean format argparser args"""
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-n",
+        action="store",
+        dest="n",
+        default=10000,
+        help="count of data structures to create"
+    )
+    return parser
+    
+    
 def main():
-    n= 100000
+    parser = _get_argparser()
+
+    # parse all args and put in dict
+    options = vars(parser.parse_args())
+    
     dicts = []
     lists = []
     slots = []
     data_classes = []
-    for i in range(n):
+    for i in range(options['n']):
         uuid_1 = uuid.uuid4()
         uuid_2 = uuid.uuid4()
         int_1 = random.randint(1, 10**8)
