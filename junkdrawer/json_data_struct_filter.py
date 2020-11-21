@@ -167,7 +167,7 @@ def filter_data(data, filters, mode="inclusive", compound=True):
                 if match_count > 0:
                     match = True
 
-            if match and mode == "inclusive"
+            if match and mode == "inclusive":
                 # inclusive filter mode and a match, so add
                 results.append(instance)
             elif not match and mode == "exclusive":
