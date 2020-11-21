@@ -3,15 +3,15 @@ Useful Python utilities and patterns for a career Python developer.
 
 ## Utilities
 
-**Contents**
-0. [Argparse Pattern](#Argparse-Pattern)
-1. [File Log Creator](#File-Log-Creator)
+**Contents**  
+0. [ArgumentParser Pattern](#0.-ArgumentParser-Pattern)  
+1. [File Log Creator](#1.-File-Log-Creator)
 2. [Compare Storage Perfomance of Python Data Structures](Compare-Storage-Perfomance-of-Python-Data-Structures)
 3. [JSON/Dict-like data filter](JSON/Dict-like-data-filter)
 4. [Nested dictionary and list access](#Nested-dictionary-and-list-access)
 5. [Class/Function input/output Monitor](#Class/Function-input/output-Monitor)
 
-### 0. Argparse Pattern
+### 0. ArgumentParser Pattern
 
 Clean way to code an `ArgumentParser` instance.
 
