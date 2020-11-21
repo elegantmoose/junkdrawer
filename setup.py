@@ -8,6 +8,8 @@ setup(
     url='',
     packages=find_packages(),
     install_requires=[
+        "flask",
+        "gunicorn",
         "pympler",
         "pyyaml"
     ]
