@@ -5,14 +5,14 @@ Useful Python utilities and patterns for a career Python developer.
 
 **Contents**  
 
-0. [ArgumentParser Pattern](#-0.-ArgumentParser-Pattern)  
-1. [File Log Creator](#-1.-File-Log-Creator)
-2. [Compare Storage Perfomance of Python Data Structures](Compare-Storage-Perfomance-of-Python-Data-Structures)
-3. [JSON/Dict-like data filter](JSON/Dict-like-data-filter)
-4. [Nested dictionary and list access](#Nested-dictionary-and-list-access)
-5. [Class/Function input/output Monitor](#Class/Function-input/output-Monitor)
+1. [ArgumentParser Pattern](#-1-ArgumentParser-Pattern)  
+2. [File Log Creator](#-2-File-Log-Creator)
+3. [Compare Storage Perfomance of Python Data Structures](Compare-Storage-Perfomance-of-Python-Data-Structures)
+4. [JSON/Dict-like data filter](JSON/Dict-like-data-filter)
+5. [Nested dictionary and list access](#Nested-dictionary-and-list-access)
+6. [Class/Function input/output Monitor](#Class/Function-input/output-Monitor)
 
-### 0. ArgumentParser Pattern
+### 1. ArgumentParser Pattern
 
 Clean way to code an `ArgumentParser` instance.
 
@@ -21,7 +21,7 @@ Just see code for clean formatting.
 
 [code](/junkdrawer/arg_parser.py)
 
-### 1. File Log Creator
+### 2. File Log Creator
 
 Simple wrapper for creating Python logger instances with file handlers.
 
