@@ -10,7 +10,7 @@ Useful Python utilities and patterns for a career Python developer.
 3. [Compare Storage Perfomance of Python Data Structures](#3-Compare-Storage-Perfomance-of-Python-Data-Structures)
 4. [JSON-like data filter](#4-JSON-like-data-filter)
 5. [Nested dictionary and list access](#5-Nested-dictionary-and-list-access)
-6. [Class-Function input/output Monitor](#6-Class-Function-input/output-Monitor)
+6. [Class-Function IO Monitor](#6-Class-Function-IO-Monitor)
 
 ### 1. ArgumentParser Pattern
 
@@ -133,7 +133,7 @@ Utility functions for nested dictionary and list access.
 TODO
 ```
 
-### 6. Class-Function input/output Monitor
+### 6. Class-Function IO Monitor
 
 Wrap classes and functions to record all input and output.
 
