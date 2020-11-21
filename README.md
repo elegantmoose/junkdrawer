@@ -3,7 +3,7 @@ Useful Python utilities and patterns for a career Python developer.
 
 ## Utilities
 
-### Log creator
+### 1. File Log Creator
 
 Simple wrapper for creating Python logger instances with file handlers.
 
@@ -35,17 +35,19 @@ DEFAULT_LOG_FP = "<program_name>.log"
 DEFAULT_LOG_LEVEL = "WARNING"
 ```
 
-### Compare Storage Perfomance of Python Data Structures
+### 2. Compare Storage Perfomance of Python Data Structures
 
-Evaluate the performance of the following data structures for a data object:
-  - dict
-  - list
-  - data classes
-  - slots classes
+**Purpose**
+
+Evaluate the memory performance of the following data structures for a data object:
+- dict
+- list
+- data classes
+- slots classes
 
 [code](junkdrawer/dict_vs_list_vs_dataclass_vs_slots.py)
 
-Usage:
+**Usage**
 
 First, create a simple object data model in a yaml file.
 
@@ -89,7 +91,7 @@ Size of lists: 219225080 bytes
 Size of dicts: 242425584 bytes
 ```
 
-### Nested dictionary and list access
+### 3. Nested dictionary and list access
 
 _(not coded by maintainer, see module docstrings for reference)_
 
@@ -97,23 +99,25 @@ Utility functions for nested dictionary and list access.
 
 [code](junkdrawer/nested_dict_access_by_key_list.py)
 
-Usage:
+**Usage**
 ```sh
 TODO
 ```
 
-### JSON/Dict-like data filter
+### 4. JSON/Dict-like data filter
 
 A filter function that can work on any JSON-like data structure (i.e. lists, dicts, and values). The filter function takes a list of the JSON-like data instances and then applies filters (specified by simple filter format) to them. Filters can be supplied to filter out matching instances or filter in matching instances. The filters can be for string matches, substring check (via python "in"), re.search pattern or re.match pattern. Filters may also be flagged to be applied separately as a set (i.e. compound filter).
 
+**Purpose**
+
 [code](/junkdrawer/json_data_struct_filter.py)
 
-Usage
+**Usage**
 ```
 (TODO)
 ```
 
-### Class/Function input/output monitor
+### 5. Class/Function input/output monitor
 
 Wrap classes and functions to record all input and output.
 
