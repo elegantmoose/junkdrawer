@@ -8,8 +8,7 @@ Useful Python utilities and patterns for a career Python developer.
 Simple wrapper for creating Python logger instances with file handlers.
 
 **Purpose**
-- I frequently just need to initialize a logger with a handler to a file.
-I didnt like having to rewrite all the handler init and config every time.
+- I frequently just need to initialize a logger with a handler to a file. I didnt like having to rewrite all the handler init and config every time.
 - Additionally, I made this utility able to also return "fangless" loggers in that it will return a logger with no filehandler, e.g. no logs will be produced other than possible terminal output. I found this really useful as many customers wanted scripts with the ability to toggle logging.
 
 [code](/junkdrawer/log.py)
@@ -31,7 +30,6 @@ Usage
 >>> from log import get_logger
 >>> log = get_file_logger(enabled=False)
 
-
 # To change get_logger() defaults, just edit these global vars in log.py
 DEFAULT_LOG_FP = "<program_name>.log"
 DEFAULT_LOG_LEVEL = "WARNING"
@@ -42,14 +40,53 @@ DEFAULT_LOG_LEVEL = "WARNING"
 Evaluate the performance of the following data structures for a data object:
   - dict
   - list
-  - dataclass
-  - slots
+  - data classes
+  - slots classes
 
 [code](junkdrawer/dict_vs_list_vs_dataclass_vs_slots.py)
 
 Usage:
+
+First, create a simple object data model in a yaml file.
+
+Supported primary types are:
+- str
+- int
+- float
+- complex
+- bool
+- list
+- tuple
+- set
+- dict
+
+Supported item types (e.g. the subtype used for when the primay type
+is one of [list, tuple, set, dict].
+- int
+- float
+- bool
+
+Data Model File (yaml)
+```yml
+# data_model.yml
+var1: int
+var2: bool
+var3: str
+var4: float
+var5: complex
+var6: list:int
+var7: tuple:bool
+var8: set:float
+var9: dict:int
 ```
-TODO
+
+```sh
+>>python dict_vs_list_vs_dataclass_vs_slots.py -d data_model.yml -n 100000
+n is 100000
+Size of data classes: 824456 bytes
+Size of slots classes: 216825080 bytes
+Size of lists: 219225080 bytes
+Size of dicts: 242425584 bytes
 ```
 
 ### Nested dictionary and list access

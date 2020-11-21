@@ -1,11 +1,45 @@
 """
+--- Purpose
 Compare data structure storage performance of:
   - dict
   - list
   - dataclasses
   - slots
   
-Usage:
+--- Usage
+First, create a simple object data model in a yaml file.
+
+Supported primary types are:
+    - str
+    - int
+    - float
+    - complex
+    - bool
+    - list
+    - tuple
+    - set
+    - dict
+
+Supported item types (e.g. the subtype used for when the primay type
+is one of [list, tuple, set, dict].
+    - int
+    - float
+    - bool
+
+Data Model File (yaml)
+```
+var1: int
+var2: bool
+var3: str
+var4: float
+var5: complex
+var6: list:int
+var7: tuple:bool
+var8: set:float
+var9: dict:int
+```
+
+
 >>python dict_vs_list_vs_dataclass_vs_slots.py -d <yaml data file> -n <n instances>
 """
 
@@ -17,16 +51,6 @@ import random
 import uuid
 from yaml import safe_load
 
-
-# class MK:
-#     __slots__ = ["uuid_1", "uuid_2", "int_1", "int_2", "float_1", "float_2"]
-#     def __init__(self, uuid_1, uuid_2, int_1, int_2, float_1, float_2):
-#         self.uuid_1 = uuid_1
-#         self.uuid_2 = uuid_2
-#         self.int_1 = int_1
-#         self.int_2 = int_2
-#         self.float_1 = float_1
-#         self.float_2 = float_2
 
 STRING = "It is not the critic who counts; not the man who points out how the strong man stumbles, or where the doer of deeds could have done them better. The credit belongs to the man who is actually in the arena, whose face is marred by dust and sweat and blood; who strives valiantly; who errs, who comes short again and again, because there is no effort without error and shortcoming; but who does actually strive to do the deeds; who knows great enthusiasms, the great devotions; who spends himself in a worthy cause; who at the best knows in the end the triumph of high achievement, and who at the worst, if he fails, at least fails while daring greatly, so that his place shall never be with those cold and timid souls who neither know victory nor defeat."
 STRING_SIZE = 10
@@ -50,40 +74,24 @@ class TYPES(Enum):
     SET = set
 
 
-class ITEM_TYPES:
-    BOOL= bool
+class ITEM_TYPES(Enum):
+    BOOL = bool
     INT = int
     FLOAT = float
-
-
-class MK:
-    """Base slots class that will dynamically add slots too, thus
-    getting psuedo-dynamic slot class creation"""
-    __slots__ = []
-    def __init__(self):
-        pass
-
-
-def _get_slots_class(base, *slots):
-    """
-    NOTE: got this clever thing from stackoverflow but have since lost the ref.
-    """
-    class DynSlots(base):
-        __slots__ = slots
-    DynSlots.__name__ = base.__name__
-    return DynSlots
 
 
 def _random_item_values(item_type, size):
     """
     NOTE: no checking of item_type, assumes is one of ITEM_TYPES
     """
-    if item_type == TYPES.INT:
+    if item_type == ITEM_TYPES.INT:
         l = [random.randint(INT_RANGE[0], INT_RANGE[1]) for i in range(size)]
-    elif item_type == TYPES.BOOL:
+    elif item_type == ITEM_TYPES.BOOL:
         l = [random.choice([True, False]) for i in range(size)]
-    elif item_type == TYPES.FLOAT:
+    elif item_type == ITEM_TYPES.FLOAT:
         l = [random.uniform(FLOAT_RANGE[0], FLOAT_RANGE[1]) for i in range(size)]
+    else:
+        raise ValueError(f"Item type {item_type} not supported.")
     return l
 
 
@@ -92,19 +100,19 @@ def _check_and_get_types(type_str):
     if ":" in type_str:
         primary_type, item_type  = type_str.split(":")
     else:
-        primary_type = None
+        primary_type = type_str
         item_type = None
     try:
         primary_type = getattr(TYPES, primary_type.upper())
     except ValueError:
         raise Warning(f"Data field type {primary_type} is not supported as a primary field type.")
+        primary_type = None
     if item_type:
         try:
             item_type = getattr(ITEM_TYPES, item_type.upper())
         except ValueError:
-            raise Warning(f"Data field type {primary_type} is not supported as a item field type.")
+            raise Warning(f"Data field type {item_type} is not supported as a item field type.")
     return primary_type, item_type
-    
 
 
 def _random_data_fields(data_model):
@@ -178,8 +186,8 @@ def main():
     args["n"] = int(args["n"])
 
     data_model = safe_load(open(args["data_model"], 'r'))
-    data_class = make_dataclass("MK", data_model)
-    slots_class = _get_slots_class(MK, data_model.keys())
+    DataClass = make_dataclass("MK", data_model)
+    SlotsClass =  type("MKS", (object, ), {"__slots__": list(data_model.keys())})
 
     dicts = []
     lists = []
@@ -188,16 +196,18 @@ def main():
     for _ in range(args['n']):
         fields_values = _random_data_fields(data_model)
         dicts.append(fields_values)
-        lists.append(fields_values.values())
-        slots.append(slots_class(fields_values.values()))
-        data_classes.append(data_class(**fields_values))
+        lists.append(list(fields_values.values()))
+        data_classes.append(DataClass(**fields_values))
+        sc = SlotsClass()
+        for k,v in fields_values.items():
+            setattr(sc, k, v)
+        slots.append(sc)
 
     print(f"n is {args['n']}")
-    print(f"Size of dicts: {asizeof.asizeof(dicts)}")
-    print(f"Size of lists: {asizeof.asizeof(lists)}")
-    print(f"Size of slots: {asizeof.asizeof(slots)}")
-    print(f"Size of slots: {asizeof.asizeof(data_classes)}")
-
+    print(f"Size of data classes: {asizeof.asizeof(data_classes)} bytes")
+    print(f"Size of slots classes: {asizeof.asizeof(slots)} bytes")
+    print(f"Size of lists: {asizeof.asizeof(lists)} bytes")
+    print(f"Size of dicts: {asizeof.asizeof(dicts)} bytes")
 
 
 if __name__ == "__main__":
