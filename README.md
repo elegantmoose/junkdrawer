@@ -3,6 +3,23 @@ Useful Python utilities and patterns for a career Python developer.
 
 ## Utilities
 
+**Contents**
+0. [Argparse Pattern](#Argparse-Pattern)
+1. [File Log Creator](#File-Log-Creator)
+2. [Compare Storage Perfomance of Python Data Structures](Compare-Storage-Perfomance-of-Python-Data-Structures)
+3. [JSON/Dict-like data filter](JSON/Dict-like-data-filter)
+4. [Nested dictionary and list access](#Nested-dictionary-and-list-access)
+5. [Class/Function input/output Monitor](#Class/Function-input/output-Monitor)
+
+### 0. Argparse Pattern
+
+Clean way to code an `ArgumentParser` instance.
+
+**Usage**
+Just see code for clean formatting.
+
+[code](/junkdrawer/arg_parser.py)
+
 ### 1. File Log Creator
 
 Simple wrapper for creating Python logger instances with file handlers.
@@ -36,8 +53,6 @@ DEFAULT_LOG_LEVEL = "WARNING"
 ```
 
 ### 2. Compare Storage Perfomance of Python Data Structures
-
-**Purpose**
 
 Evaluate the memory performance of the following data structures for a data object:
 - dict
@@ -91,20 +106,7 @@ Size of lists: 219225080 bytes
 Size of dicts: 242425584 bytes
 ```
 
-### 3. Nested dictionary and list access
-
-_(not coded by maintainer, see module docstrings for reference)_
-
-Utility functions for nested dictionary and list access.
-
-[code](junkdrawer/nested_dict_access_by_key_list.py)
-
-**Usage**
-```sh
-TODO
-```
-
-### 4. JSON/Dict-like data filter
+### 3. JSON/Dict-like data filter
 
 A filter function that can work on any JSON-like data structure (i.e. lists, dicts, and values). The filter function takes a list of the JSON-like data instances and then applies filters (specified by simple filter format) to them. Filters can be supplied to filter out matching instances or filter in matching instances. The filters can be for string matches, substring check (via python "in"), re.search pattern or re.match pattern. Filters may also be flagged to be applied separately as a set (i.e. compound filter).
 
@@ -117,7 +119,20 @@ A filter function that can work on any JSON-like data structure (i.e. lists, dic
 (TODO)
 ```
 
-### 5. Class/Function input/output monitor
+### 4. Nested dictionary and list access
+
+_(not coded by maintainer, see module docstrings for reference)_
+
+Utility functions for nested dictionary and list access.
+
+[code](junkdrawer/nested_dict_access_by_key_list.py)
+
+**Usage**
+```sh
+TODO
+```
+
+### 5. Class/Function input/output Monitor
 
 Wrap classes and functions to record all input and output.
 
