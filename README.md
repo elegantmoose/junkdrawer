@@ -5,7 +5,7 @@ Useful Python utilities and patterns for a career Python developer.
 
 **Contents**  
 
-1. [ArgumentParser Pattern](#-1-ArgumentParser-Pattern)  
+1. [ArgumentParser Pattern](#1-ArgumentParser-Pattern)  
 2. [File Log Creator](#-2-File-Log-Creator)
 3. [Compare Storage Perfomance of Python Data Structures](Compare-Storage-Perfomance-of-Python-Data-Structures)
 4. [JSON/Dict-like data filter](JSON/Dict-like-data-filter)
