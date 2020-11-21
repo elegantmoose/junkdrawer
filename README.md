@@ -8,9 +8,9 @@ Useful Python utilities and patterns for a career Python developer.
 1. [ArgumentParser Pattern](#1-ArgumentParser-Pattern)  
 2. [File Log Creator](#2-File-Log-Creator)
 3. [Compare Storage Perfomance of Python Data Structures](#3-Compare-Storage-Perfomance-of-Python-Data-Structures)
-4. [JSON/Dict-like data filter](#4-JSON/Dict-like-data-filter)
+4. [JSON-like data filter](#4-JSON-like-data-filter)
 5. [Nested dictionary and list access](#5-Nested-dictionary-and-list-access)
-6. [Class/Function input/output Monitor](#6-Class/Function-input/output-Monitor)
+6. [Class-Function input/output Monitor](#6-Class-Function-input/output-Monitor)
 
 ### 1. ArgumentParser Pattern
 
@@ -107,7 +107,7 @@ Size of lists: 219225080 bytes
 Size of dicts: 242425584 bytes
 ```
 
-### 4. JSON/Dict-like data filter
+### 4. JSON-like data filter
 
 A filter function that can work on any JSON-like data structure (i.e. lists, dicts, and values). The filter function takes a list of the JSON-like data instances and then applies filters (specified by simple filter format) to them. Filters can be supplied to filter out matching instances or filter in matching instances. The filters can be for string matches, substring check (via python "in"), re.search pattern or re.match pattern. Filters may also be flagged to be applied separately as a set (i.e. compound filter).
 
@@ -133,7 +133,7 @@ Utility functions for nested dictionary and list access.
 TODO
 ```
 
-### 6. Class/Function input/output Monitor
+### 6. Class-Function input/output Monitor
 
 Wrap classes and functions to record all input and output.
 
