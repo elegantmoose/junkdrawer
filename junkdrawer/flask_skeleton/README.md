@@ -9,7 +9,7 @@ A useful Flask skeleton to jumpstart a Flask web/REST API framework.
   - Using blueprints and having ability to dynamically load blueprints 
     (sets of endpoints) based on runtime configuration file.
 
-  See files for implementation:  
+   - See files for implementation:  
     - [flask_skeleton.rest_api.__init__.py](flask_skeleton/rest_api/__init__.py)  
     - [flask_skeleton.rest_api.endpoints_1.py](flask_skeleton/rest_api/endpoints_1.py)  
     - [config.yml](config.yml)  
