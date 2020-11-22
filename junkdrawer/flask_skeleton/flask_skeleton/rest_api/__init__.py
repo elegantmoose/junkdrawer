@@ -13,7 +13,7 @@ TEST_ENDPOINTS_MODULE_EV = "TEST_BLUEPRINT_MODULE"  # environment variable that 
 
 
 def create_app(config=None):
-    app = Flask("<app_name>")
+    app = Flask("Flask Skeleton")
 
     # Use gunicorn logging mechanism
     # (REF: https://medium.com/@trstringer/logging-flask-and-gunicorn-the-manageable-way-2e6f0b8beb2f)
@@ -45,13 +45,13 @@ def create_app(config=None):
         # Load REST API
         endpoint_modules = []
         for module_name in app.config["endpoints"]:
-            module_path = "flask_skeleton.rest_api" + module_name
+            module_path = "flask_skeleton.rest_api." + module_name
             endpoint_modules.append(module_path)
             module = import_module(module_path)
             blueprint = getattr(module, module_name)   # Blueprint has same name as module
             app.register_blueprint(blueprint)
 
-        app.logger.critical("<init messages>")
+        app.logger.critical(f"Endpoints loaded: {endpoint_modules}")
 
     else:
         # -- test mode --

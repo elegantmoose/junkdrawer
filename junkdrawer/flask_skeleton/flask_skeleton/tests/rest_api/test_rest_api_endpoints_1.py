@@ -21,7 +21,7 @@ def client(test_config, fake_database):
     app = create_app()
     app.config["config"] = test_config
     app.config["TESTING"] = True
-    app.config["database"] = fake_database   # Here is where we attack a fake database to Flask test client
+    app.config["database"] = fake_database   # Here is where we attach a fake database to Flask test client
     with app.test_client() as client:
         yield client
 

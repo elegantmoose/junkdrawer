@@ -9,8 +9,6 @@ endpoints_1 = Blueprint("endpoints_1", __name__)
 # NOTE: 'current_app' will give us access to the Flask app object
 
 
-
-
 # -- Endpoints --
 
 @endpoints_1.route("/")
