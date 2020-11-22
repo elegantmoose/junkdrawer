@@ -33,7 +33,7 @@ A useful Flask skeleton to jumpstart a Flask web/REST API framework.
     - [flask_skeleton.scripts.start_flask_app.py](flask_skeleton/scripts/start_flask_app.py)  
     - [config.yml](config.yml)   
 
-5. **Utilizing Flask's test client (https://flask.palletsprojects.com/en/1.1.x/testing/) fixture for testing endpoints; as well with the ability to dynamically configure and load in different Blueprints (endpoints) for testing.**  
+5. **Utilizing [Flask's test client](https://flask.palletsprojects.com/en/1.1.x/testing/) fixture for testing endpoints; as well with the ability to dynamically configure and load in different Blueprints (endpoints) for testing.**  
 
   - See files for implementation:  
     - [flask_skeleton.tests.rest_api.test_rest_endpoints_1.py](flask_skeleton/tests/rest_api/test_rest_api_endpoints_1.py)  
