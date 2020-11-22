@@ -10,6 +10,8 @@ def client(test_config):
     """Test client for REST API"""
     os.environ[TEST_FLAG_EV] = "True"
     os.environ[TEST_ENDPOINTS_MODULE_EV] = 'flask_skeleton.rest_api.endpoints_1'
+    # NOTE: Must set above env vars first so that when app
+    # is created it pulls those values and app is created in test mode
     app = create_app()
     app.config["config"] = test_config
     app.config["TESTING"] = True

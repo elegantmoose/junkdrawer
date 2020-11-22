@@ -5,7 +5,7 @@ import os
 from flask import Flask
 from yaml import safe_load
 
-
+DEFAULT_CONFIG_FP = "/etc/flask_skeleton/config.yml"
 CONFIG_FP_EV = "<CONFIG_FP_EV>"   # Name of environment variable that has config filepath
 TEST_FLAG_EV = "<TEST_FLAG_EV>"    # Name of environment variable that is the test flag
 TEST_ENDPOINTS_MODULE_EV = "<TEST_ENDPOINTS_MODULE_EV>"  #
@@ -29,6 +29,13 @@ def create_app(config=None):
         app.logger.critical("Production mode set.")
         app.config["config"] = safe_load(open(CONFIG_FILE, 'r'))
 
+        # Initialize database/backend
+        db_module = import_module(app.config["database"]["module"])
+        app.config["database"] = getattr(db_module, "DatabaseHandler")(
+            logger=app.logger,
+            *app.config["module_config"]
+        )
+
         # (any further initialization, maybe components/objects that REST
         # API will use.)
         #
@@ -44,6 +51,7 @@ def create_app(config=None):
             app.register_blueprint(blueprint)
 
         app.logger.critical("<init messages>")
+        
     else:
         # -- test mode --
         app.logger.critical("Test mode set.")

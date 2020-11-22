@@ -3,8 +3,6 @@ from flask import (Blueprint, make_response, json, redirect, request,
 
 endpoints_1 = Blueprint("endpoints_1", __name__)
 
-CONFIG_FILE = "/etc/<package>/config.yml"
-
 
 # -- Endpoints --
 

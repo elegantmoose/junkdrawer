@@ -1,0 +1,14 @@
+rest_api:
+  host: 0.0.0.0
+  port: 2323
+  endpoints:
+    - endpoints_1
+  log_fp: "/var/log/flask_skeleton.log"
+  log_level: "WARNING"
+database:
+  module: flask_skeleton.database.db
+  module_config:
+    url: 127.0.0.1
+    port: 1623
+    user: "<user>"
+    pass: "<pass>"
