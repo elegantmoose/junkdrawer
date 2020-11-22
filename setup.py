@@ -11,6 +11,7 @@ setup(
         "flask",
         "gunicorn",
         "pympler",
-        "pyyaml"
+        "pytest",
+        "pyyaml",
     ]
 )
