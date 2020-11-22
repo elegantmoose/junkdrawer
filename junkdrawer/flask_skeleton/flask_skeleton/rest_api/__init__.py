@@ -5,9 +5,10 @@ import os
 from flask import Flask
 from yaml import safe_load
 
+
 DEFAULT_CONFIG_FP = "/etc/flask_skeleton/config.yml"
-CONFIG_FP_EV = "<CONFIG_FP_EV>"   # Name of environment variable that has config filepath
-TEST_FLAG_EV = "<TEST_FLAG_EV>"    # Name of environment variable that is the test flag
+CONFIG_FP_EV = "FLASK_SKELETON_CONFIG"   # Name of environment variable that has config filepath
+TEST_FLAG_EV = "TEST_FLAG"    # Name of environment variable that is the test flag
 TEST_ENDPOINTS_MODULE_EV = "<TEST_ENDPOINTS_MODULE_EV>"  #
 
 
@@ -51,7 +52,7 @@ def create_app(config=None):
             app.register_blueprint(blueprint)
 
         app.logger.critical("<init messages>")
-        
+
     else:
         # -- test mode --
         app.logger.critical("Test mode set.")

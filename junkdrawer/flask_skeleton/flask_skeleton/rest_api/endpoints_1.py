@@ -11,11 +11,11 @@ endpoints_1 = Blueprint("endpoints_1", __name__)
 
 @endpoints_1.route("/")
 def index():
-    return redirect(url_for("endpoints_1.<package>"))
+    return redirect(url_for("endpoints_1.flask_skeleton"))
 
 
-@endpoints_1.route("/<package>")
-def package():
+@endpoints_1.route("/flask_skeleton")
+def flask_skeleton():
     """Index root/landing endpoint."""
     text_banner = "BLAH"
     resp = make_response(text_banner, 200)
