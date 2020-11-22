@@ -11,6 +11,7 @@ Useful Python utilities and patterns for a career Python developer.
 4. [JSON-like data filter](#4-JSON-like-data-filter)
 5. [Nested dictionary and list access](#5-Nested-dictionary-and-list-access)
 6. [Class-Function IO Monitor](#6-Class-Function-IO-Monitor)
+7. [Flask App Skeleton](#7-Flask-App-Skeleton)
 
 ### 1. ArgumentParser Pattern
 
@@ -189,3 +190,9 @@ Usage
 >>
 """
 ```
+
+### 7. Flask App Skeleton
+
+A useful Flask skeleton to jumpstart a Flask web/REST API framework.
+
+See dedicated [Flask App README](junkdrawer/flask_skeleton/) for documentation.
