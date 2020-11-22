@@ -7,9 +7,9 @@ from yaml import safe_load
 
 
 DEFAULT_CONFIG_FP = "/etc/flask_skeleton/config.yml"
-CONFIG_FP_EV = "FLASK_SKELETON_CONFIG"   # Name of environment variable that has config filepath
-TEST_FLAG_EV = "TEST_FLAG"    # Name of environment variable that is the test flag
-TEST_ENDPOINTS_MODULE_EV = "<TEST_ENDPOINTS_MODULE_EV>"  #
+CONFIG_FP_EV = "FLASK_SKELETON_CONFIG"   # environment variable that has config filepath
+TEST_FLAG_EV = "TEST_FLAG"    # environment variable that is the test flag
+TEST_ENDPOINTS_MODULE_EV = "TEST_BLUEPRINT_MODULE"  # environment variable that holds test Blueprint/endpoints full module name
 
 
 def create_app(config=None):

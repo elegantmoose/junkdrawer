@@ -1,3 +1,4 @@
+# Test config for flask_skeleton
 rest_api:
   host: 0.0.0.0
   port: 2323
