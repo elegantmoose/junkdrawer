@@ -195,4 +195,4 @@ Usage
 
 A useful Flask skeleton to jumpstart a Flask web/REST API framework.
 
-See dedicated [Flask App README](junkdrawer/flask_skeleton/README.md) for documentation.
+See dedicated [Flask App README](junkdrawer/flask_skeleton/) for documentation.
