@@ -20,7 +20,8 @@ A useful Flask skeleton to jumpstart a Flask web/REST API framework.
   - See files for implementation:  
     - [flask_skeleton.rest_api.\_\_init\_\_.py](flask_skeleton/rest_api/__init__.py)  
     - [flask_skeleton.database.db.py](flask_skeleton/database/db.py)  
-    - [config.yml](config.yml)  
+    - [config.yml](config.yml)      
+    - [flask_skeleton.rest_api.endpoints_1.py](flask_skeleton/rest_api/endpoints_1.py) 
 
 3. **Attaching Flask app to gunicorn logging mechanism.**  
 
