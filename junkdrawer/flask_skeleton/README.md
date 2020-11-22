@@ -25,12 +25,13 @@ A useful Flask skeleton to jumpstart a Flask web/REST API framework.
 3. **Attaching Flask app to gunicorn logging mechanism.**  
 
   - See files for implementation:  
-    - [flask_skeleton.rest_api.__init__.py](flask_skeleton/rest_api/__init__.py)  
+    - [flask_skeleton.rest_api.\_\_init\_\_.py](flask_skeleton/rest_api/__init__.py)  
 
 4. **Starting Flask app with script, where runtime config can be supplied to script via command line.**  
 
   - See files for implemenation:  
     - [flask_skeleton.scripts.start_flask_app.py](flask_skeleton/scripts/start_flask_app.py)  
+    - [config.yml](config.yml)   
 
 5. **Utilizing Flask's test client (https://flask.palletsprojects.com/en/1.1.x/testing/) fixture for testing endpoints; as well with the ability to dynamically configure and load in different Blueprints (endpoints) for testing.**  
 
