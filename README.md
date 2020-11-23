@@ -17,8 +17,8 @@ Useful Python utilities and patterns for a career Python developer.
 
 Clean way to code an `ArgumentParser` instance.
 
-**Usage**
-Just see code for clean formatting.
+**Usage**  
+Just see code.
 
 [code](/junkdrawer/arg_parser.py)
 
@@ -129,8 +129,8 @@ Utility functions for nested dictionary and list access.
 
 [code](junkdrawer/nested_dict_access_by_key_list.py)
 
-**Usage**
-```sh
+**Usage**  
+```python
 from nested_dict_access_by_key_list import get_by_path, set_by_path, in_nested_path
 
 # retrieve nested dict item
@@ -173,8 +173,8 @@ Wrap classes and functions to record all input and output.
 
 [code](junkdrawer/func_io_monitor.py)
 
-Usage
-```sh
+**Usage**  
+```python
 >>from func_io_monitor import func_io_monitor, class_io_monitor, RECORD_TYPES
 >>
 >># EXAMPLE: Single Function
@@ -221,7 +221,6 @@ Usage
 >>#
 >>#2020-08-10 12:05:26 INFO     __main__.arith.del_ - IN: {'args': (0, -2), 'kwargs': {}} - OUT: 2
 >>
-"""
 ```
 
 ### 7. Flask App Skeleton
