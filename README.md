@@ -17,8 +17,8 @@ Useful Python utilities and patterns for a career Python developer.
 
 Clean way to code an `ArgumentParser` instance.
 
-**Usage**
-Just see code for clean formatting.
+**Usage**  
+Just see code.
 
 [code](/junkdrawer/arg_parser.py)
 
@@ -129,9 +129,42 @@ Utility functions for nested dictionary and list access.
 
 [code](junkdrawer/nested_dict_access_by_key_list.py)
 
-**Usage**
-```sh
-TODO
+**Usage**  
+```python
+from nested_dict_access_by_key_list import get_by_path, set_by_path, in_nested_path
+
+# retrieve nested dict item
+>>> d = {"1": {"2":{"3": "salvador"}}} 
+>>> get_by_path(d, ["1", "2", "3"])
+'salvador'
+
+# Note that nested retrieval may be dynamic
+>>> d = {"1": {"2":{"3": "salvador"}}} 
+>>> level_2 = "2"
+>>> get_by_path(d, ["1", level_2, "3"])
+'salvador'
+
+# Note how nested lists are navigated
+>>> d
+{'1': {'2': {'3': ['seldon', {'4': 'mallow'}]}}}
+>>> get_by_path(d, ["1", "2", "3", 1, "4"])
+'mallow'
+
+# set nested dict item (note: can also be done dynamically with variables)
+>>> d
+{'1': {'2': {'3': 'salvador'}}}
+>>> set_by_path(d, ["1", "2"], "mallow")
+>>> d
+{'1': {'2': 'mallow'}}
+
+# Use Python "in" operator on nested dict/list
+#
+# Note how lists are navigated here. We navigate to dict with
+# key '3', then jump to index 1, then back to key "4
+>>> d
+{'1': {'2': {'3': ['seldon', {'4': 'mallow'}]}}}
+>>> in_nested_path(d, ["1", "2", "3", 1, "4"])
+True
 ```
 
 ### 6. Class-Function IO Monitor
@@ -140,8 +173,8 @@ Wrap classes and functions to record all input and output.
 
 [code](junkdrawer/func_io_monitor.py)
 
-Usage
-```sh
+**Usage**  
+```python
 >>from func_io_monitor import func_io_monitor, class_io_monitor, RECORD_TYPES
 >>
 >># EXAMPLE: Single Function
@@ -188,7 +221,6 @@ Usage
 >>#
 >>#2020-08-10 12:05:26 INFO     __main__.arith.del_ - IN: {'args': (0, -2), 'kwargs': {}} - OUT: 2
 >>
-"""
 ```
 
 ### 7. Flask App Skeleton
