@@ -1,6 +1,20 @@
 # junkdrawer
 Useful Python utilities and patterns for a career Python developer.
 
+## Install
+
+From PyPi
+```
+pip install junkdrawer
+```
+
+From Github
+```
+git clone git@github.com:elegantmoose/junkdrawer.git
+cd junkdrawer
+pip install .
+```
+
 ## Utilities
 
 **Contents**  
