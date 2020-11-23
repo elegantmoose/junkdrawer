@@ -156,7 +156,6 @@ from nested_dict_access_by_key_list import get_by_path, set_by_path, in_nested_p
 >>> set_by_path(d, ["1", "2"], "mallow")
 >>> d
 {'1': {'2': 'mallow'}}
-```
 
 # Use Python "in" operator on nested dict/list
 #
