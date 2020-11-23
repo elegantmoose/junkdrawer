@@ -4,12 +4,12 @@ Useful Python utilities and patterns for a career Python developer.
 ## Install
 
 From PyPi
-```
+```sh
 pip install junkdrawer
 ```
 
 From Github
-```
+```sh
 git clone git@github.com:elegantmoose/junkdrawer.git
 cd junkdrawer
 pip install .
