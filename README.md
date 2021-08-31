@@ -249,6 +249,6 @@ See dedicated [Flask App README](junkdrawer/flask_skeleton/) for documentation.
 ### 8. Decorator Plugin Pattern
 
 A pattern for adding modular plugin functions to a code base. Created this pattern independently but then there was a great PyCon 2019 talk about it that is great for presenting to new audience (Geir Arne Hjelle: Adding Flexibility to Your Apps -
-https://www.youtube.com/watch?v=98s9YfoXB68)
+https://www.youtube.com/watch?v=98s9YfoXB68).
 
 [code](junkdrawer/decorator_plugin)
