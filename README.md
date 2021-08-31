@@ -26,6 +26,8 @@ pip install .
 5. [Nested dictionary and list access](#5-Nested-dictionary-and-list-access)
 6. [Class-Function IO Monitor](#6-Class-Function-IO-Monitor)
 7. [Flask App Skeleton](#7-Flask-App-Skeleton)
+8. [Decorator Plugin Pattern](#8-Decorator-Plugin-Pattern)
+
 
 ### 1. ArgumentParser Pattern
 
@@ -242,3 +244,11 @@ Wrap classes and functions to record all input and output.
 A useful Flask skeleton to jumpstart a Flask web/REST API framework.
 
 See dedicated [Flask App README](junkdrawer/flask_skeleton/) for documentation.
+
+
+### 8. Decorator Plugin Pattern
+
+A pattern for adding modular plugin functions to a code base. Created this pattern independently but then there was a great PyCon 2019 talk about it that is great for presenting to new audience (Geir Arne Hjelle: Adding Flexibility to Your Apps -
+https://www.youtube.com/watch?v=98s9YfoXB68)
+
+[code](junkdrawer/decorator_plugin)
