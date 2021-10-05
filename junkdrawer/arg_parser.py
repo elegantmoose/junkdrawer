@@ -7,20 +7,25 @@ import argparse
 def _get_argparser():
     """to organize and clean format argparser args"""
     parser = argparse.ArgumentParser()
+    
+    parser.add_argument(
+        'arg-1',
+        help='desc'
+    )
 
     parser.add_argument(
-        "--arg_1",
+        "--optional-arg-1",
         action="store",
-        dest="arg_1",
-        default="default_arg_1",
+        dest="optional_arg_1",
+        default="default_optional_arg_1",
         help="help message"
     )
 
     parser.add_argument(
-        "--arg_2",
+        "--optional-arg-2",
         action="store",
-        dest="arg_2",
-        default="default_arg_2",
+        dest="optional_arg_2",
+        default="default_optional_arg_2",
         help="help message"
     )
 
