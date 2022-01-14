@@ -27,6 +27,7 @@ pip install .
 6. [Class-Function IO Monitor](#6-Class-Function-IO-Monitor)
 7. [Flask App Skeleton](#7-Flask-App-Skeleton)
 8. [Decorator Plugin Pattern](#8-Decorator-Plugin-Pattern)
+9. [Singleton Class](#9-Singleton-Class)
 
 
 ### 1. ArgumentParser Pattern
@@ -252,3 +253,7 @@ A pattern for adding modular plugin functions to a code base. Created this patte
 https://www.youtube.com/watch?v=98s9YfoXB68).
 
 [code](junkdrawer/decorator_plugin)
+
+### 9. Singleton Class
+
+[code](junkdrawer/singleton_class.py)
