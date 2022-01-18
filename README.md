@@ -151,15 +151,15 @@ Utility functions for nested dictionary and list access.
 from nested_dict_access_by_key_list import get_by_path, set_by_path, in_nested_path
 
 # retrieve nested dict item
->>> d = {"1": {"2":{"3": "salvador"}}} 
+>>> d = {"1": {"2":{"3": "salvor"}}} 
 >>> get_by_path(d, ["1", "2", "3"])
-'salvador'
+'salvor'
 
 # Note that nested retrieval may be dynamic
->>> d = {"1": {"2":{"3": "salvador"}}} 
+>>> d = {"1": {"2":{"3": "salvor"}}} 
 >>> level_2 = "2"
 >>> get_by_path(d, ["1", level_2, "3"])
-'salvador'
+'salvor'
 
 # Note how nested lists are navigated
 >>> d
@@ -255,5 +255,8 @@ https://www.youtube.com/watch?v=98s9YfoXB68).
 [code](junkdrawer/decorator_plugin)
 
 ### 9. Singleton Class
+
+_(not coded by maintainer, see module docstrings for reference)_
+
 
 [code](junkdrawer/singleton_class.py)
